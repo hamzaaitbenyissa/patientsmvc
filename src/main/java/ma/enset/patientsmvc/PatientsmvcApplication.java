@@ -19,14 +19,14 @@ public class PatientsmvcApplication {
     }
 
 
-    @Bean
+/*    @Bean*/
     CommandLineRunner commandLineRunner(PatientRepository patientRepository){
 
         return  args ->{
 
             Faker faker = new Faker();
             Random rd = new Random();
-            for (int i = 0; i < 20; i++) {
+            for (int i = 0; i < 100; i++) {
                 patientRepository.save(new Patient(null,faker.name().name(),faker.date().birthday(), rd.nextBoolean(),rd.nextInt(100)));
             }
         };
