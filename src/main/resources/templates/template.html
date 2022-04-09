@@ -26,7 +26,7 @@
                 <a class="nav-link dropdown-toggle" th:href="@{index}" role="button"
                    data-bs-toggle="dropdown">patients</a>
                 <ul class="dropdown-menu">
-                    <li sec:authorize="hasRole('ADMIN')"><a class="dropdown-item" th:href="@{formPatients}">Nouveau</a>
+                    <li sec:authorize="hasAuthority('ADMIN')"><a class="dropdown-item" th:href="@{formPatients}">Nouveau</a>
                     </li>
                     <li><a class="dropdown-item" th:href="@{index}">Chercher</a></li>
                 </ul>
